@@ -7,7 +7,7 @@
     "stop": "pm2 stop server-database && pm2 delete server-database"
   },
   "dependencies": {
-    "acebase": "^1.12.2",
+    "acebase": "^1.12.3",
     "acebase-ipc-server": "^1.0.0",
     "acebase-server": "^1.7.0",
     "nodemon": "^2.0.12",

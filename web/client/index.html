@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[test] ACEBASE</title>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/acebase-client@1.10.0/dist/browser.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/acebase-client@1.10.1/dist/browser.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
@@ -57,6 +57,10 @@
   } 
 
   async function getAllClinics(){
+    console.log(new Date())
+    await ACEBASE.indexes.create('CLINICAS', 'name');
+    console.log(new Date())
+
     const resData = await ACEBASE.ref('CLINICAS').get();
     const objData = resData.val();
     console.log(objData);
